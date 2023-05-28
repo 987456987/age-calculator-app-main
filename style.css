@@ -38,11 +38,6 @@
     font-size: 64px;
 }
 
-.content {
-    border: solid 4px;
-    padding: 2em;
-}
-
 .purple{
     color: var(--primary1);
 }
@@ -52,37 +47,52 @@
     font-size: 14px;
 }
 
-/* Layout */
+/*#############################
+    LAYOUT
+#############################*/
 
-.input {
-    font-size: 32px;
-    max-width: 3.5em;
-    border-radius: .2em;
+.content {
+    border: solid 4px;
+    padding: 2em;
 }
 
-.container-input{
-    display: flex;
-}
+    /*#############################
+        Input Container
+    #############################*/
 
-.container-input-group {
-    display: grid;
-}
+    .container-input{
+        display: flex;
+    }
 
-.container-submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .container-input-group {
+        display: grid;
+    }
 
-.divider {
-    min-width: 100%;
-    height: 1px;
-    border: 2px solid;
-    margin: 3em 0;
-}
+    .input {
+        font-size: 32px;
+        max-width: 3.5em;
+        border-radius: .2em;
+    }
 
-.button-submit{
-    position: absolute;
-    right: 2em;
-}
+    /*#############################
+        Submit Container
+    #############################*/
+
+    .container-submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divider {
+        min-width: 100%;
+        height: 1px;
+        border: 2px solid;
+        margin: 3em 0;
+    }
+
+    .button-submit{
+        position: absolute;
+        right: 2em;
+    }
 
