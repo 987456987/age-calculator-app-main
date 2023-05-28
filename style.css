@@ -137,3 +137,46 @@ body {
         padding-right: 10px;
         letter-spacing: 0;
     }
+
+/*#############################
+    Media Queries
+#############################*/
+
+@media (max-width: 700px){
+    .bold-italic{
+        font-size: 12vw;
+    }
+
+    .button-submit{
+        position: absolute;
+    }
+
+    body{
+        margin: 0 1em;
+    }
+    .content{
+        min-width: 100%;
+        padding: 3em 4vw;
+    }
+
+    .divider{
+        margin: 4em 0;
+    }
+    .button-submit{
+        padding: 1em;
+    }
+    
+    .button-submit img{
+        width: 3em;
+    }
+
+    .input {
+        max-width: 4em;
+        font-size: 6vw;
+    }
+
+    .container-input-group {
+        margin-right: 1em;
+    }
+    
+}
