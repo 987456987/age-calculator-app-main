@@ -35,7 +35,7 @@
     font-family: var(--font);
     font-weight: 800;
     font-style: italic;
-    font-size: 64px;
+    font-size: 100px;
 }
 
 .purple{
@@ -45,15 +45,28 @@
 .input-label {
     letter-spacing: .2em;
     font-size: 14px;
+    padding-bottom: .5em;
+    color: var(--smokeGrey);
 }
 
 /*#############################
     LAYOUT
 #############################*/
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+    background-color: var(--offWhite);
+}
 
 .content {
-    border: solid 4px;
-    padding: 2em;
+    padding: 3em 4em;
+    width: 100%;
+    max-width: 850px;
+    border-radius: 20px;
+    border-bottom-right-radius: 30%;
+    background-color: var(--white);
 }
 
     /*#############################
@@ -66,12 +79,17 @@
 
     .container-input-group {
         display: grid;
+        margin-right: 2em;
     }
 
     .input {
         font-size: 32px;
-        max-width: 3.5em;
+        max-width: 5em;
         border-radius: .2em;
+        border: 2px solid var(--lightGrey);
+        padding: .3em;
+        padding-left: .6em;
+        color: var(--offBlack);
     }
 
     /*#############################
@@ -85,14 +103,35 @@
     }
 
     .divider {
-        min-width: 100%;
+        width: 100%;
         height: 1px;
-        border: 2px solid;
+        border: 1px solid var(--lightGrey);
         margin: 3em 0;
     }
 
     .button-submit{
-        position: absolute;
+        position: relative;
         right: 2em;
+        padding: 1.5em;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--primary1);
     }
 
+    .button-submit:hover{
+        background-color: var(--offBlack);
+        cursor: pointer;
+    }
+
+    .button-submit img{
+        width: 45px;
+    }
+
+    /*#############################
+        Output Container
+    #############################*/
+    
+    .output {
+        line-height: 1em;
+        padding-bottom: .2em;
+    }
