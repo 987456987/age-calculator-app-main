@@ -36,10 +36,7 @@
     font-weight: 800;
     font-style: italic;
     font-size: 100px;
-}
-
-.purple{
-    color: var(--primary1);
+    letter-spacing: 1px;
 }
 
 .input-label {
@@ -61,11 +58,12 @@ body {
 }
 
 .content {
-    padding: 3em 4em;
+    padding: 3.5em 3.5em;
+    padding-bottom: 3em;
     width: 100%;
-    max-width: 850px;
+    max-width: 840px;
     border-radius: 20px;
-    border-bottom-right-radius: 30%;
+    border-bottom-right-radius: 25%;
     background-color: var(--white);
 }
 
@@ -111,7 +109,6 @@ body {
 
     .button-submit{
         position: relative;
-        right: 2em;
         padding: 1.5em;
         border-radius: 50%;
         border: none;
@@ -124,7 +121,7 @@ body {
     }
 
     .button-submit img{
-        width: 45px;
+        width: 55px;
     }
 
     /*#############################
@@ -132,6 +129,11 @@ body {
     #############################*/
     
     .output {
-        line-height: 1em;
-        padding-bottom: .2em;
+        line-height: 1.15em;
+    }
+
+    .purple{
+        color: var(--primary1);
+        padding-right: 10px;
+        letter-spacing: 0;
     }
