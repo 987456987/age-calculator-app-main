@@ -1,0 +1,39 @@
+:root {
+    /* Colors */
+    --primary1: hsl(259, 100%, 65%);
+    --primary2: hsl(0, 100%, 67%);
+
+    --white: hsl(0, 0%, 100%);
+    --offWhite: hsl(0, 0%, 94%);
+    --lightGrey: hsl(0, 0%, 86%);
+    --smokeGrey: hsl(0, 1%, 44%);
+    --offBlack: hsl(0, 0%, 8%);
+
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* typography */
+
+.light-italic {
+    font-family: var(--font);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.medium {
+    font-family: var(--font);
+    font-weight: 700;
+}
+
+.bold-italic {
+    font-family: var(--font);
+    font-weight: 800;
+    font-style: italic;
+}
+
