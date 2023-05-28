@@ -24,6 +24,9 @@
     font-family: var(--font);
     font-weight: 400;
     font-style: italic;
+    font-size: 14px;
+    padding-top: 10px;
+    color: var(--primary2)
 }
 
 .medium {
@@ -71,7 +74,7 @@ body {
         Input Container
     #############################*/
 
-    .container-input{
+    .container-input-main{
         display: flex;
     }
 
@@ -81,6 +84,7 @@ body {
     }
 
     .input {
+        position: relative;
         font-size: 32px;
         max-width: 5em;
         border-radius: .2em;
@@ -88,6 +92,19 @@ body {
         padding: .3em;
         padding-left: .6em;
         color: var(--offBlack);
+    }
+
+    .input:focus{
+        outline: none;
+        border-color: var(--primary1);
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+    .error{
+        display: none;
     }
 
     /*#############################
@@ -143,26 +160,36 @@ body {
 #############################*/
 
 @media (max-width: 700px){
-    .bold-italic{
-        font-size: 12vw;
-    }
-
-    .button-submit{
-        position: absolute;
-    }
-
+/* layout */
     body{
         margin: 0 1em;
     }
+
     .content{
         min-width: 100%;
         padding: 3em 4vw;
     }
 
+    .bold-italic{
+        font-size: 12vw;
+    }
+
+/* input */
+    .container-input-group {
+        margin-right: 1em;
+    }
+
+    .input {
+        max-width: 4em;
+        font-size: 6vw;
+    }
+  
+/* submit */
     .divider{
         margin: 4em 0;
     }
     .button-submit{
+        position: absolute;
         padding: 1em;
     }
     
@@ -170,13 +197,6 @@ body {
         width: 3em;
     }
 
-    .input {
-        max-width: 4em;
-        font-size: 6vw;
-    }
-
-    .container-input-group {
-        margin-right: 1em;
-    }
+    
     
 }
