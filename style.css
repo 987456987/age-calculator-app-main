@@ -18,7 +18,7 @@
     padding: 0;
 }
 
-/* typography */
+/* Typography */
 
 .light-italic {
     font-family: var(--font);
@@ -35,12 +35,24 @@
     font-family: var(--font);
     font-weight: 800;
     font-style: italic;
+    font-size: 64px;
 }
 
 .content {
     border: solid 4px;
     padding: 2em;
 }
+
+.purple{
+    color: var(--primary1);
+}
+
+.input-label {
+    letter-spacing: .2em;
+    font-size: 14px;
+}
+
+/* Layout */
 
 .input {
     font-size: 32px;
@@ -50,7 +62,6 @@
 
 .container-input{
     display: flex;
-    border: solid;
 }
 
 .container-input-group {
@@ -67,9 +78,11 @@
     min-width: 100%;
     height: 1px;
     border: 2px solid;
+    margin: 3em 0;
 }
 
 .button-submit{
     position: absolute;
+    right: 2em;
 }
 
