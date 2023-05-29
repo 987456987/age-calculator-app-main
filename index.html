@@ -12,6 +12,8 @@
     
     <title>Frontend Mentor | Age calculator app</title>
 
+    
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution { font-size: 11px; text-align: center; }
@@ -25,18 +27,18 @@
         <div class="container-input-main">
           <div class="container-input-group">
             <label class="input-label medium" for="day">DAY</label>
-            <input class="input medium" id="day" type="text" placeholder="DD">
-            <p class="error light-italic hidden">Valid Email</p>
+            <input class="input medium" id="day" type="text" placeholder="DD" required>
+            <p class="error light-italic hidden" id="error-day">This field is required.</p>
           </div>
           <div class="container-input-group">
             <label class="input-label medium" for="month">MONTH</label>
-            <input class="input medium" id="month" type="text" placeholder="MM">
-            <p class="error light-italic hidden">Valid Email</p>
+            <input class="input medium" id="month" type="text" placeholder="MM" required>
+            <p class="error light-italic hidden" id="error-month">This field is required.</p>
           </div>
           <div class="container-input-group">
             <label class="input-label medium" for="year">YEAR</label>
-            <input class="input medium" id="year" type="text" placeholder="YYYY">
-            <p class="error light-italic hidden">Valid email</p>
+            <input class="input medium" id="year" type="text" placeholder="YYYY" required>
+            <p class="error light-italic hidden" id="error-year">This field is required.</p>
           </div>
         </div>
         <div class="container-submit">
@@ -54,5 +56,6 @@
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
