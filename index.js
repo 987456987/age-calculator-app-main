@@ -132,31 +132,66 @@ function displayError () {
     OUTPUT LOGIC
 ///////////////////*/
 
-function displayOutput() {
-    const inputDate = new Date(parseInt(inputYear.value, 10), parseInt(inputMonth.value, 10) - 1, parseInt(inputDay.value, 10));
+function fadeOut(element) {
+    element.classList.remove("fade-transition");
+    element.style.opacity = 0;
+  }
+  
+  function fadeIn(element) {
+    element.classList.add("fade-transition");
+    element.style.opacity = 1;
+  }
 
+  function displayOutput() {
+    const inputDate = new Date(
+      parseInt(inputYear.value, 10),
+      parseInt(inputMonth.value, 10) - 1,
+      parseInt(inputDay.value, 10)
+    );
+  
     const currentDate = new Date();
-
+  
     const yearDiff = currentDate.getFullYear() - inputDate.getFullYear();
     const monthDiff = currentDate.getMonth() - inputDate.getMonth();
     const dayDiff = currentDate.getDate() - inputDate.getDate();
-
+  
     let years = yearDiff;
     let months = monthDiff;
     let days = dayDiff;
-
+  
     if (dayDiff < 0) {
-        months--;
-        const monthLength = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
-        days = monthLength + dayDiff;
+      months--;
+      const monthLength = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        0
+      ).getDate();
+      days = monthLength - inputDate.getDate() + currentDate.getDate();
     }
-
+  
     if (monthDiff < 0) {
-        years--;
-        months += 12;
+      years--;
+      months = 12 - inputDate.getMonth() + currentDate.getMonth();
     }
-
-    outputYear.textContent = `${years}`;
-    outputMonth.textContent = `${months}`;
-    outputDay.textContent = `${days}`;
-}
+  
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+  
+    fadeOut(outputYear);
+    fadeOut(outputMonth);
+    fadeOut(outputDay);
+  
+    setTimeout(() => {
+      outputYear.textContent = `${years}`;
+      outputMonth.textContent = `${months}`;
+      outputDay.textContent = `${days}`;
+  
+      fadeIn(outputYear);
+      fadeIn(outputMonth);
+      fadeIn(outputDay);
+    }, 500);
+  }
+  
+  

@@ -1,5 +1,7 @@
 :root {
-    /* Colors */
+/*#############################
+    Colors
+#############################*/
     --primary1: hsl(259, 100%, 65%);
     --primary2: hsl(0, 100%, 67%);
 
@@ -18,7 +20,9 @@
     padding: 0;
 }
 
-/* Typography */
+/*#############################
+    Typography
+#############################*/
 
 .light-italic {
     font-family: var(--font);
@@ -199,8 +203,13 @@ body {
     
     .button-submit img{
         width: 3em;
-    }
+    }  
+}
 
-    
-    
+/*#############################
+    Animation
+#############################*/
+
+.fade-transition {
+    transition: opacity 0.5s ease-in-out;
 }
